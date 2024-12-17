@@ -282,11 +282,11 @@ func (a *Amount) UnmarshalJSON(data []byte) error {
 }
 
 type Receipt struct {
-	Retailer     string `json:"retailer"`
-	PurchaseDate Date   `json:"purchaseDate"`
-	PurchaseTime Time   `json:"purchaseTime"`
-	Items        []Item `json:"items"`
-	Total        Amount `json:"total"`
+	Retailer     Retailer `json:"retailer"`
+	PurchaseDate Date     `json:"purchaseDate"`
+	PurchaseTime Time     `json:"purchaseTime"`
+	Items        []Item   `json:"items"`
+	Total        Amount   `json:"total"`
 }
 
 func (r *Receipt) computeReceiptPoints() int64 {
